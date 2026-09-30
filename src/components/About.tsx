@@ -102,7 +102,7 @@ export default function About() {
           <div className="lg:col-span-5 relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 aspect-[4/5] sm:aspect-square lg:aspect-[4/5]">
               <Image
-                src="/images.jpg"
+                src="/images/images.jpg"
                 alt="Eshetana Energy Engineers on Site"
                 fill
                 sizes="(max-width: 1024px) 100vw, 40vw"

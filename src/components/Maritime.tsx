@@ -35,7 +35,7 @@ export default function Maritime() {
           <div className="lg:col-span-5 relative order-2 lg:order-1">
             <div className="relative rounded-2xl overflow-hidden border-2 border-slate-700 shadow-2xl aspect-[4/3] sm:aspect-[16/10]">
               <Image
-                src="/images (1).jpg"
+                src="/images/images (1).jpg"
                 alt="Offshore Marine Operations"
                 fill
                 sizes="(max-width: 1024px) 100vw, 500px"

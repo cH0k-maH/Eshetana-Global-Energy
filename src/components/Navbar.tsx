@@ -114,7 +114,7 @@ export default function Navbar() {
             >
               <div className="relative w-11 h-11 sm:w-13 sm:h-13 bg-white p-1 rounded-md shadow-md flex-shrink-0 transition-transform duration-200 group-hover:scale-105">
                 <Image
-                  src="/logo.png"
+                  src="/images/logo.png"
                   alt="Eshetana Global Logo"
                   fill
                   sizes="52px"
@@ -321,7 +321,7 @@ export default function Navbar() {
             >
               <div className="relative w-9 h-9 bg-white p-1 rounded">
                 <Image
-                  src="/logo.png"
+                  src="/images/logo.png"
                   alt="Eshetana Global Logo"
                   fill
                   sizes="36px"

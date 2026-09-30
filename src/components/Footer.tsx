@@ -60,7 +60,7 @@ export default function Footer() {
               <Link href="/" className="flex items-center gap-3">
                 <div className="relative w-11 h-11 bg-white p-1 rounded">
                   <Image
-                    src="/logo.png"
+                    src="/images/logo.png"
                     alt="Eshetana Global Logo"
                     fill
                     sizes="44px"
