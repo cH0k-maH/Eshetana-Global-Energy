@@ -1,26 +1,94 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --primary-navy: #0B2E59;
+    --navy-dark: #071F3D;
+    --navy-light: #123A68;
+    --accent-orange: #F26A21;
+    --orange-hover: #D85611;
+    --light-gray: #F4F6F8;
+    --dark-text: #17212B;
+    --medium-blue: #1E5A91;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #ffffff;
+    color: #17212B;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    overflow-x: hidden;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Infinite Marquee Animations for Clients Section */
+@keyframes marquee-forward {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-backward {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-forward {
+  display: flex;
+  width: max-content;
+  animation: marquee-forward 35s linear infinite;
+}
+
+.animate-marquee-backward {
+  display: flex;
+  width: max-content;
+  animation: marquee-backward 35s linear infinite;
+}
+
+.marquee-container:hover .animate-marquee-forward,
+.marquee-container:hover .animate-marquee-backward {
+  animation-play-state: paused;
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #0B2E59;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F26A21;
+}
+
+/* Gallery fade-in-up animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Gallery progress bar animation */
+@keyframes galleryProgress {
+  from { width: 0%; }
+  to   { width: 100%; }
 }
